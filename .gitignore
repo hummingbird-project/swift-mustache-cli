@@ -6,7 +6,6 @@
 /Packages
 /*.xcodeproj
 xcuserdata/
-Package.resolved
 /public
 /docs
 .benchmarkBaselines
