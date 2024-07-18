@@ -1,6 +1,6 @@
 # Mustache
 
-Command line tool for render Mustache templates
+Command line tool for rendering Mustache templates
 
 ## Overview
 
