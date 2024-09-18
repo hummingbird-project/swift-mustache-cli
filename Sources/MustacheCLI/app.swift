@@ -31,11 +31,12 @@ struct MustacheApp: ParsableCommand {
 
         Examples:
         mustache context.yml template.mustache
+        mustache default.yml,context.yml template.mustache
         cat context.yml | mustache - template.mustache
         """
     )
 
-    @Argument(help: "Context file")
+    @Argument(help: "Comma separated list of context files")
     var contextFile: String
 
     @Argument(help: "Mustache template file")
