@@ -1,4 +1,4 @@
-// swift-tools-version:5.9
+// swift-tools-version:6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -7,7 +7,7 @@ let package = Package(
     name: "swift-mustache-cli",
     platforms: [.macOS(.v10_15), .iOS(.v13), .tvOS(.v13), .watchOS(.v6)],
     products: [
-        .executable(name: "mustache", targets: ["swift-mustache-cli"]),
+        .executable(name: "mustache", targets: ["MustacheCLI"]),
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.4.0"),
@@ -16,12 +16,16 @@ let package = Package(
     ],
     targets: [
         .executableTarget(
-            name: "swift-mustache-cli",
+            name: "MustacheCLI",
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
                 .product(name: "Mustache", package: "swift-mustache"),
                 .product(name: "Yams", package: "yams"),
             ]
+        ),
+        .testTarget(
+            name: "MustacheCLITests",
+            dependencies: ["MustacheCLI"]
         )
     ]
 )
