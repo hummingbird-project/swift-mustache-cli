@@ -1,3 +1,5 @@
+#if swift(>=6.0)
+
 import Testing
 
 @testable import MustacheCLI
@@ -123,3 +125,5 @@ struct MustacheCLITests {
     }
 
 }
+
+#endif // swift(>=6.0)
