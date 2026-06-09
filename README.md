@@ -24,6 +24,15 @@ cat context.yml | mustache - template.mustache
 
 ## Install
 
+### Using Homebrew
+
+Use [homebrew](https://brew.sh) to install mustache.
+
+```bash
+brew tap hummingbird-project/tap
+brew install swift-mustache-cli
+```
+
 ### Using mint
 
 Use [mint](https://github.com/yonaskolb/Mint) to build and install mustache.
